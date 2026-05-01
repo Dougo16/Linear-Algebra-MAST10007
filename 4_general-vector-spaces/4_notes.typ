@@ -399,3 +399,62 @@ To find a basis for $V = "span"{bold(v)_1, ..., bold(v)_k}$ where $bold(v)_1 ...
 #pagebreak(weak: true)
 
 = 4.6 Solution space, column space, row space
+
+#theorem[Solution space][
+  Let $A in M_(m, n)(FF)$ be an $m*n$ matrix with entries in $FF$. Then the solution set
+  $ S = {bold(x) in FF^n | A bold(x) = bold(0)} $
+  is a subspace of $FF^n$, with *x* as a column vector.
+
+  This is called the *solution space* or *nullspace* of $A$, and its dimension is called the _nullity_ of $A$, denoted by _nullity($A$)_.
+]
+
+#proof[
+  Follows from the conditions of the subspace theorem.
+]
+
+#definition[Column space][
+  Let $A in M_(m,n)(FF)$ be an $m*n$ matrix with entries in $FF$. The subspace of $FF^m$ spanned by the columns of $A$ is called the *column space* of $A$.
+]
+
+#definition[Row space][
+  Let $A in M_(m,n)(FF)$ be an $m*n$ matrix with entries in $FF$. The subspace of $FF^n$ spanned by the rows of $A$ is called the *row space* of $A$.
+]
+
+#note[][
+  - The column space and row space are subspaces, since the span of any set of vectors is a subspace.
+  - To find a basis for the column space us the column method.
+  - To find a basis for the row space use the row method.
+]
+
+== Effect of row operations
+
+Assume that $A~B$ by a sequence of elementary row operations. Then:
+- Solution space of $A = $ solution space of $B$,
+- Row space of $A = $ row space of $B$,
+- Column space of A is not necessarily the column space of $B$.
+
+#theorem[][
+  For any $m*n$ matrix $A$:
+  $ "rank"(A) = "dim"("row space of "A) = "dim"("column space of "A) $
+]
+
+This is because in both case the number of leading entries in row-echelon form determines the number of basis vectors.
+
+#linebreak()
+
+#theorem[Rank-nullity theorem][
+  Suppose $A$ is an $m*n$ matrix. Then:
+  $ "rank"(A) + "nullity"(A) = n = "number of columns in "A $
+]
+
+#proof[
+  Suppose $A$ has row-echelon form $B$.
+  The rank of $A$ = the number of columns in $B$ containing a leading entry. 
+  The nullity of $A$ equals the number of columns in B which do not contain a leading entry.
+  Therefore, $"rank"(A) + "nullity"(A)$ is the number of columns in $B$, which is the number of columns in $A$.
+]
+
+#pagebreak(weak: true)
+
+= 4.7 Coordinates relative to a basis
+
