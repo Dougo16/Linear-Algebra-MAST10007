@@ -458,3 +458,27 @@ This is because in both case the number of leading entries in row-echelon form d
 
 = 4.7 Coordinates relative to a basis
 
+#theorem[Linear combinations of bases][
+  If ${bold(v)_1, ..., bold(v)_n}$ is a basis for vector space $V$, then 
+  every vector $bold(v) in V$ can be written _uniquely_ in the form 
+  $ bold(v) = alpha_1 bold(v)_1 + ... + alpha_n bold(v)_n $
+]
+
+#definition[Coordinates][
+  Suppose $Beta = {bold(v)_1, ..., bold(v)_n}$ is an _ordered_ basis 
+  for a vector space $V$, ie. always arranged in the same order.
+  $ bold(v) = alpha_1 bold(v)_1 + ... + alpha_n bold(v)_n "for some scalars" alpha_i in FF $
+  The scalars are uniquely determined by *v* and are called the *coordinates of v relative to $Beta$*.
+  $ [bold(v)]_Beta = vec(alpha_1, dots.v, alpha_n) $
+  is the _coordinate vector of *v* with respect to $Beta$_.
+]
+
+Having a fixed and finite ordered basis $Beta$ for a vector space $V$, there is a _one-to-one relationship_ between vectors and their coordinate vectors.
+
+#theorem[][
+  For a finite dimensional vector space $V$ over a field of scalars $FF$, with $Beta$ as an ordered basis of $V$, 
+  $ [bold(u) + bold(v)]_Beta = [bold(u)]_Beta + [bold(v)]_Beta $
+  $ [alpha bold(v)]_Beta = alpha [bold(v)]_Beta $
+]
+
+This shows that taking coordinates is a *linear transformation* between $V$ and $FF^n$.
